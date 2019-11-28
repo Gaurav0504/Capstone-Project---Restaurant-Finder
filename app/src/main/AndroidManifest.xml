@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.gaurav.restaurantfinder">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--required by ge0-fence-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.example.gaurav.restaurantfinder.App.RestaurantApp"
+        android:allowBackup="true"
+        android:icon="@drawable/restaurant_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/restaurant_icon"
+        android:supportsRtl="true"
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="whateverString"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="zomato-key"
+            android:value="abc430f2d53edd45e02c53db5efa8cb2" />
+
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2254452761438382~6735068584" />
+
+        <activity
+            android:name="com.example.gaurav.restaurantfinder.MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name="com.example.gaurav.restaurantfinder.DetailActivity"
+            android:parentActivityName="com.example.gaurav.restaurantfinder.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.gaurav.restaurantfinder.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.gaurav.restaurantfinder.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.example.gaurav.restaurantfinder.database.RestaurantProvider"
+            android:authorities="com.example.gaurav.restaurantfinder"
+            android:exported="false" />
+        <receiver android:name="com.example.gaurav.restaurantfinder.widget.RestaurantInfoWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_restaurant_info" />
+        </receiver>
+
+        <receiver android:name="com.example.gaurav.restaurantfinder.BootCompletedIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.example.gaurav.restaurantfinder.widget.RecipeInfoWidgetRemoteViewService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+        <service android:name="com.example.gaurav.restaurantfinder.geofence.GeofenceTransitionsIntentService" />
+    </application>
+</manifest>

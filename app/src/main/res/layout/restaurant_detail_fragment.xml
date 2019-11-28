@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_header_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/CUISINES" />
+
+            <TextView
+                android:id="@+id/cuisines"
+                style="@style/text_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                style="@style/text_header_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/COST_FOR_TWO" />
+
+            <TextView
+                android:id="@+id/cost"
+                style="@style/text_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                style="@style/text_header_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/RATINGS" />
+
+            <TextView
+                android:id="@+id/ratings"
+                style="@style/text_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/online"
+                style="@style/text_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/text_view_marin_top"
+                android:text="@string/serves_online_delivery"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_header_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/Address" />
+
+            <TextView
+                android:id="@+id/address"
+                style="@style/text_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/secondary_text" />
+
+            <TextView
+                android:id="@+id/open_in_map"
+                style="@style/text_header_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/MAPSANDDIRECTION"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

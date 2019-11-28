@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">RestaurantFinder</string>
+    <string name="result_retrieve_error">Unable to get Restaurant list</string>
+    <string name="no_connection">No Internet Connection!</string>
+    <string name="CUISINES">CUISINES</string>
+    <string name="COST_FOR_TWO">COST FOR TWO</string>
+    <string name="serves_online_delivery">Has online delivery</string>
+    <string name="RATINGS">RATINGS</string>
+    <string name="Address">Address</string>
+    <string name="MAPSANDDIRECTION">MAPS AND DIRECTION</string>
+    <string name="install_map">Please install a maps application</string>
+    <string name="favourite">Favourite</string>
+    <string name="All_Restaurant">All Restaurants</string>
+    <string name="search">Search</string>
+    <string name="DETECT_MY_LOCATION">DETECT MY LOCATION</string>
+    <string name="OR">OR</string>
+    <string name="Enter_Your_Location">Enter Your Location</string>
+    <string name="SEARCH">SEARCH</string>
+    <string name="grant_location_permission">Location Permission is needed to access device Location</string>
+    <string name="unable_to_detect_location">Unable to detect Location. Please enter your Location Manually</string>
+    <string name="no_results">No Restaurants Found!</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="space">%1$s %2$d</string>
+    <string name="concat">%1$s%2$s</string>
+    <string name="restaurant_image">This is the Restaurant\'s Image</string>
+    <string name="geofence_transition_invalid_type">invalid transition type %1$d</string>
+    <string name="grant_permission_for_geofence">Grant Location Permission, so that you will be notified when you are near your Favourite Restaurant</string>
+    <string name="channel_name">Favourite Restaurants</string>
+    <string name="channel_description">Channel for notifying user is there are near a favourite restaurant</string>
+    <string name="fav_restaurant_nearby">Favourite Restaurant</string>
+    <string name="checkout">you are nearby %1$s. Check it out and have a treat for your taste buds</string>
+    <string name="your_fav">your favourite restaurant</string>
+    <string name="add_remove_favourite">Add or Remove Restaurants from Favourites</string>
+</resources>

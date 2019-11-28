@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="unit2">8dp</dimen>
+    <dimen name="unit3">12dp</dimen>
+
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="text_view_marin_top">16dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+</resources>

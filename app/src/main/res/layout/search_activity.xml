@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foods_bg"
+    android:backgroundTint="@color/tint"
+    android:backgroundTintMode="multiply"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/find_my_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DETECT_MY_LOCATION"
+        android:textStyle="bold"
+        android:theme="@style/PrimaryButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/OR"
+        android:textStyle="italic|bold" />
+
+    <EditText
+        android:id="@+id/place_query"
+        android:maxLines="@integer/max_line_location"
+        android:inputType="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/Enter_Your_Location"
+        android:imeOptions="actionDone"
+        android:textColorHint="@color/primary_text"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/search_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SEARCH"
+        android:textStyle="bold"
+        android:theme="@style/PrimaryButton" />
+</LinearLayout>
